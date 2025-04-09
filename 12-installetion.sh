@@ -18,7 +18,7 @@ then
       dnf install gitttt -y
       fi [ $? -ne 0 ]
       then 
-           echo "git installation is not success check... it"
+           echo "git installation is not success...check it"
            exit 1
       else echo "git installation is success"
       fi
