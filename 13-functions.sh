@@ -5,7 +5,7 @@ USERID=$(id -u)
 
 VALIDATE(){
     echo "exit status: $1"
-    
+
 }
 
 if [ $USERID -ne 0 ]
@@ -14,7 +14,7 @@ then
      exit 1
 fi
 
-dnf installed git
+dnf list installed git
 
 VALIDATE $?
 
