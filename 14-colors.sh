@@ -39,7 +39,7 @@ dnf list installed git
   then
        echo "mysql is not installed...going to install"
        dnf install mysqlsss -y
-       VALIDATE $? "installing my sql"
+       VALIDATE $? "installing mysql"
  else 
        echo "mysql is already installed..nothing to do"
  fi
