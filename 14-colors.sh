@@ -16,10 +16,10 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-         echo -e "$2 is...$R FAILED"
+         echo -e "$2 is...$R FAILED $N"
          exit 1
     else
-          echo "$2 is...SUCCESS
+          echo "$2 is... $G SUCCESS $N"
     fi
 }
   CHECK_ROOT
