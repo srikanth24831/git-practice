@@ -5,6 +5,7 @@ USERID=$(id -u)
 
 VALIDATE(){
     echo "exit status: $1"
+    
 }
 
 if [ $USERID -ne 0 ]
