@@ -27,7 +27,7 @@ then
  echo "git is not installed, going to install it.."
       dnf install git -y
       VALIDATE $? "installing git"
-      then 
+      else
            echo "git installation is not success...check it"
            exit 1
       else
