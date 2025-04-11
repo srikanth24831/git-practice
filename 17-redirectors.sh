@@ -39,7 +39,8 @@ do
     then
     echo "$package is not insstalled going to install it.." &>>$LOG_FILE
     dnf install $package -y &>>$LOG_FILE
+    VALIDATE $? "installing $package"
     else
          echo "$package is already $Y installed..nothing to do $N" &>>$LOG_FILE
      fi    
-    done
+ done
