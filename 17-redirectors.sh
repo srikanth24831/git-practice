@@ -11,7 +11,7 @@ G=\e[32m"
 N=\e[33m"
 
 CHECK_ROOT(){
-  if [ $USERID -ne 0 ]
+  if [ $USERID -ne 0 ];
 then
    echo -e "$R please run this script with root privilages $N" &>>$LOG_FILE
      exit 1
