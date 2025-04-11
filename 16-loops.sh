@@ -28,5 +28,13 @@ CHECK_ROOT
 
 for package in $@  # $@ refers to all orguments passed to it
 do
-    echo $package
-done
+
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then
+    echo "$package is not insstalled going to install it.."
+    dnf install $package -y
+    else
+         echo "$package is already installed..nothing to do"
+     fi    
+    done
