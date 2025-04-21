@@ -30,17 +30,9 @@ fi
 
 }
 
-USAGE(){
-  echo -e $R"USAGE:: $N sudo sh 17-redirectors.sh package1 package2..."
-   exit1
-
-}
 
 CHECK_ROOT
-
-if [ $# -eq 0 ]
-then
-     USAGE
+    
 
 for package in $@  # $@ refers to all orguments passed to it
 do
@@ -52,6 +44,6 @@ do
     dnf install $package -y &>>$LOG_FILE
     VALIDATE $? "installing package"
     else
-         echo -e "$package is already $Y installed..nothing to do $N" &>>$LOG_FILE
+         echo "$package is already $Y installed..nothing to do $N" &>>$LOG_FILE
      fi    
     done
