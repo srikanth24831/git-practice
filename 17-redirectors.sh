@@ -1,14 +1,15 @@
 #!/bin/bash
 
 LOG_FOLDER="/var/log/shell-script"
-SCRIPTNAME=$(echo $0 | cut -d "." -fi)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%M-%d-%H-%M-%S)
-LOG_FILE=$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
 mkdir -p $LOGS_FOLDER
+
 USERID=$(id -u)
 R="\e[31m"
 G=\e[32m"
-N=\e[33m"
+N=\e[0m"
 
 CHECK_ROOT(){
   if [ $USERID -ne 0 ]
